@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/site.css">
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+		<!--<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta name="description" content="student directory">
+		<title>The PG 2.0</title>
+	</head>
+	<body>
+		<div id="layout">
+			<div id="header">
+			</div>
+			<div class="splash-container">
+				<div class="splash">
+					<h1 class="splash-head">The Peanut Gallery</h1>
+					<p class="splash-subhead">
+						Because facebook was down.
+					</p>
+					<p>
+						<a href="#search" class="pure-button pure-button-primary">Find who you're looking for</a>
+					</p>
+				</div>
+			</div>
+			
+			<div id="content" class="content-wrapper">
+				<div class="content">
+					<h2 class="content-head is-center">Take a look</h2>
+					<div class="l-box-lrg pure-g">
+						<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2">
+							<a href="#"><h1><i class="fa fa-male fa-5x"></i></h1>
+							<h3>Men</h3></a>
+						</div>
+						<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2">
+							<a href="#"><h1><i class="fa fa-female fa-5x"></i></h1>
+							<h3>Women</h3></a>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h1 class="content-head is-center">Search</h1>
+					<div class="l-box-lrg pure-g">
+						<div id="searchDiv" class="l-box-lrg is-center pure-u-1 pure-u-md-1-3">
+							<form class="pure-form">
+								<input id="studentSearch" class="typeahead pure-input-1-4" type="text" placeholder="Student Name">
+							</form>
+						</div>
+						<div id="searchDiv" class="l-box-lrg is-center pure-u-1 pure-u-md-2-3">						
+							<p>So you already know who they are. Now its time to find out a little more, or maybe you just forgot your friend's room number.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="footer" class="footer l-box is-center">
+					Designed by those wanted the P.G. to look better. Seriously, it needed it.
+				</div>
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/typeahead.bundle.js"></script>
+		<script>
+			$(document).ready(function(){
+				var substringMatcher = function(strs) {
+					return function findMatches(q, cb) {
+						var matches, substrRegex;
+			 
+						// an array that will be populated with substring matches
+						matches = [];
+					 
+						// regex used to determine if a string contains the substring `q`
+						substrRegex = new RegExp(q, 'i');
+					 
+						// iterate through the pool of strings and for any string that
+						// contains the substring `q`, add it to the `matches` array
+						$.each(strs, function(i, str) {
+							if (substrRegex.test(str)) {
+							// the typeahead jQuery plugin expects suggestions to a
+							// JavaScript object, refer to typeahead docs for more info
+								matches.push({ value: str });
+							}
+						});
+					 
+						cb(matches);
+					};
+				};
+			 
+				var students = ['Nathan Bland', 'Malachi Mart'];
+				 
+				$('#searchDiv .typeahead').typeahead({
+				  hint: true,
+				  highlight: true,
+				  minLength: 1
+				},
+				{
+				  name: 'students',
+				  displayKey: 'value',
+				  source: substringMatcher(students)
+				});
+			});
+		</script>
+	</body>
+</html>
