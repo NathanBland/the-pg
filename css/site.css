@@ -1,7 +1,81 @@
 #studentList {
-	padding-top: 50px;
+	padding-top: 20px;
 }
 .thumbnail {
 	margin-left: 5px;
+	margin-right: 5px;
+}
+.studentName {
+	position: relative;
+	background-color: rgba(0,0,0,0.25);
+	color: white;
+	margin-top:-26px;
+}
+.studentThumb:hover {
+	cursor: pointer;
+}
+/*utility class for state changing */
+.hidden {
+	display: none;
+}
+/* fa icon colors */
+.fa-female{
+	color: rgb(221, 42, 73);
+}
+.fa-male{
+	color: rgb(0, 143, 255);
+}
+.fa-heart{
+	color: red;
+}
+/* SOCIAL BTN COLORS */
+.social {
+	display: block;
+}
+.fa-facebook {
+	color: #3b5998;
+}
+.fa-twitter{
+	color: #55acee;
+}
+.fa-skype {
+	color: #00aff0;
+}
+.fa-google-plus {
+	color: #d73d32;
+}
+.tt-dropdown-menu {
+	background-color: rgba(253,253,253, 0.7);
+	padding-left: 13px;
+	padding-top:3px;
+	width: 100%;
+}
+.edgeButton {
+	margin-left: 5px;
+}
+/* Gear Filter Button */
+#advanced {
+	/*margin-top: -2px;*/
+	width: 6em;
+	float: right;
+}
+.fa-fw {
+	width: 5.286em;
+}
+/*Filters */
+.filters {
+	display: inline-block;
+	margin-left: 8em;
+}
+.filter {
+	display: initial;
+}
+.panel-heading i{
+	margin-left:5em;
+}
+.panel-heading i:first-child {
+	margin-left: 0;
+}
+.panel-heading .input-group-btn{
 	margin-right: 5px;
 }
