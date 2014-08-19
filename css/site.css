@@ -14,20 +14,7 @@
 .studentThumb:hover {
 	cursor: pointer;
 }
-/*utility class for state changing */
-.hidden {
-	display: none;
-}
-/* fa icon colors */
-.fa-female{
-	color: rgb(221, 42, 73);
-}
-.fa-male{
-	color: rgb(0, 143, 255);
-}
-.fa-heart{
-	color: red;
-}
+
 /* SOCIAL BTN COLORS */
 .social {
 	display: block;
@@ -63,19 +50,19 @@
 	width: 5.286em;
 }
 /*Filters */
-.filters {
-	display: inline-block;
-	margin-left: 8em;
-}
-.filter {
-	display: initial;
-}
 .panel-heading i{
 	margin-left:5em;
 }
 .panel-heading i:first-child {
 	margin-left: 0;
 }
-.panel-heading .input-group-btn{
-	margin-right: 5px;
+/* fa icon colors */
+.fa-female{
+	color: rgb(221, 42, 73);
+}
+.fa-male{
+	color: rgb(0, 143, 255);
+}
+.fa-heart{
+	color: red;
 }
