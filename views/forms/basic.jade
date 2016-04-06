@@ -1,0 +1,14 @@
+form(method='POST', action='/')
+  p.desc We simply pass on your ID and password to UC PG. 
+    br
+    | We do not log this information or store it in anyway.
+  
+  label UC ID
+  input(type='text',name='username')
+  label UC Password
+  input(type='password',name='password')
+  button(type='submit') Submit
+.notification
+  h1.status
+script(src='/js/fetch.js')
+script(src='/js/form.js')

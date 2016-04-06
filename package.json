@@ -1,0 +1,30 @@
+{
+  "name": "the-pg",
+  "version": "0.0.0",
+  "description": "the uc pg",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NathanBland/the-pg.git"
+  },
+  "keywords": [
+    "pg",
+    "uc"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanBland/the-pg/issues"
+  },
+  "homepage": "https://github.com/NathanBland/the-pg",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "htmlparser2": "^3.9.0",
+    "request": "^2.70.0"
+  }
+}
